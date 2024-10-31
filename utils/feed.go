@@ -46,6 +46,14 @@ func UpdateFeed(url, formattedTime string) {
 			Link:        v.Link,
 			Title:       v.Title,
 			Description: v.Description,
+			Content:     v.Content,
+			Authors:     func() string {
+				if len(v.Authors) > 0 {
+					return v.Authors[0].Name
+				}
+				return ""
+			}(),
+			Updated:     v.Updated,
 		})
 	}
 	globals.Lock.Lock()

@@ -1,0 +1,105 @@
+body {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .list-item-title {
+    display: flex;
+    flex-grow: 1;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .feed-col {
+    margin-bottom: 20px;
+  }
+  
+  .time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .back-button {
+    position: fixed; /* 固定位置 */
+    top: 10px; /* 距离顶部10px */
+    left: 10px; /* 距离左侧10px */
+    background: none; /* 无背景 */
+    border: none; /* 无边框 */
+    font-size: 16px; /* 字体大小 */
+    cursor: pointer; /* 鼠标指针样式 */
+    color: #2c3e50; /* 按钮颜色 */
+  }
+  
+  .view-original {
+    display: inline-block; /* 使链接成为块级元素 */
+    text-decoration: none; /* 去掉下划线 */
+  }
+  
+  .view-original:hover {
+    text-decoration: underline; /* 悬停时添加下划线 */
+  }
+  
+  .fixed-header {
+    position: fixed; /* 固定位置 */
+    top: 0; /* 距离顶部0px */
+    left: 0; /* 距离左侧0px */
+    right: 0; /* 距离右侧0px */
+    background-color: white; /* 背景颜色为白色 */
+    height: 40px; /* 高度为40px */
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    padding: 0 10px; /* 左右内边距 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    z-index: 1000; /* 确保在其他元素之上 */
+  }
+  
+  .header-title {
+    margin: 0 auto;
+  }
+  
+  .article-details {
+    width: 95%; 
+    margin: 0 auto; 
+    text-align: center; /* 抽取的样式 */
+  }
+  
+  .flex-center {
+    padding-top: 15px; 
+    display: flex; 
+    align-items: center; /* 抽取的样式 */
+  }
+  
+  .author-text {
+    color: gray; /* 设置作者颜色为灰色 */
+    margin: 0 5px 0 0; /* 设置边距 */
+    line-height: 40px; /* 设置行高 */
+  }
