@@ -85,15 +85,15 @@
         </el-row>
       </el-main>
       <!-- 文章详情部分 -->
-      <div v-if="selectedArticle" class="article-details" style="width: 95%; margin: 0 auto; text-align: center;">
+      <div v-if="selectedArticle" class="article-details">
         <div class="fixed-header">
           <button @click="selectedArticle = null" class="back-button">
             <i class="fas fa-arrow-left"></i> 返回
           </button>
           <h2 class="header-title">{{ selectedArticle.title }}</h2>
         </div>
-        <div style="padding-top: 15px; display: flex; align-items: center;"> <!-- 使用 Flexbox 布局 -->
-          <p style="color: gray; margin: 0 5px 0 0; line-height: 40px;">作者: {{ selectedArticle.author }}  |</p> <!-- 设置作者颜色为灰色 -->
+        <div class="flex-center"> <!-- 使用新类 -->
+          <p class="author-text">作者: {{ selectedArticle.author }}  |</p> <!-- 使用新创建的类 -->
           <a :href="selectedArticle.link" target="_blank" class="view-original">查看原文</a> <!-- 添加查看原文链接 -->
         </div>
         <p v-if="selectedArticle.content && selectedArticle.content.length > 0" v-html="selectedArticle.content"></p> <!-- 使用 v-html 渲染 HTML 内容 -->
