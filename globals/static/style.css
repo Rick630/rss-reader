@@ -103,3 +103,7 @@ body {
     margin: 0 5px 0 0; /* 设置边距 */
     line-height: 40px; /* 设置行高 */
   }
+  
+  .article-content {
+    text-align: left; /* 或者使用其他对齐方式，如 right, center, justify */
+  }

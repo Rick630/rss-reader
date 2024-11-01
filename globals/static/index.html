@@ -69,7 +69,7 @@
                   </div>
                   <el-scrollbar style="height: 300px;">
                     <el-list v-for="(item, i) in feed.items" :key="i">
-                      <el-list-item @click="showArticleDetails(item)">
+                      <el-list-item @click="showArticleDetails(item); $event.preventDefault()">
                         <div class="list-item-title">
                           <span>{{ i+1 }}. </span>
                           <el-link href="javascript:void(0);" :title="item.title">{{ item.title }}</el-link>
@@ -96,8 +96,8 @@
           <p class="author-text">作者: {{ selectedArticle.author }}  |</p> <!-- 使用新创建的类 -->
           <a :href="selectedArticle.link" target="_blank" class="view-original">查看原文</a> <!-- 添加查看原文链接 -->
         </div>
-        <p v-if="selectedArticle.content && selectedArticle.content.length > 0" v-html="selectedArticle.content"></p> <!-- 使用 v-html 渲染 HTML 内容 -->
-        <p v-else>{{ selectedArticle.description }}</p> <!-- 显示 description -->
+        <p v-if="selectedArticle.content && selectedArticle.content.length > 0" v-html="selectedArticle.content" class="article-content"></p> <!-- 使用 v-html 渲染 HTML 内容 -->
+        <p v-else v-html="selectedArticle.description" class="article-content"></p> <!-- 显示 description，以 HTML 方式渲染 -->
       </div>
       <el-footer>
         <el-link href="https://github.com/srcrs/rss-reader" target="_blank">Rss-reader</el-link>
