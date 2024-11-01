@@ -41,12 +41,12 @@
                 <el-scrollbar style="height: 300px;">
                   << range $i, $item :=$feed.Items >>
                     <el-list key="<< $i >>">
-                      <el-list-item @click="showArticleDetails($item); $event.preventDefault()">
+                      <el-list-item @click="showArticleDetails(item); $event.preventDefault()">
                         <div class="list-item-title">
                           <span>
                             << inc $i >>.
                           </span>
-                          <el-link href="<< $item.Link >>" target="_blank" title="<< $item.Title >>">
+                          <el-link href="javascript:void(0);" title="<< $item.Title >>">
                             << $item.Title >>
                           </el-link>
                         </div>
